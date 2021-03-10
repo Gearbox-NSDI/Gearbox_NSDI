@@ -1,0 +1,1490 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version      : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
+| Date              : Mon Mar  8 16:50:47 2021
+| Host              : fpga02-System-Product-Name running 64-bit Ubuntu 16.04.2 LTS
+| Command           : report_timing_summary -max_paths 10 -file gearbox_I_timing_summary_routed.rpt -pb gearbox_I_timing_summary_routed.pb -rpx gearbox_I_timing_summary_routed.rpx -warn_on_violation
+| Design            : gearbox_I
+| Device            : xcu250-figd2104
+| Speed File        : -2L  PRODUCTION 1.27 02-28-2020
+| Temperature Grade : E
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Summary Report
+
+------------------------------------------------------------------------------------------------
+| Timer Settings
+| --------------
+------------------------------------------------------------------------------------------------
+
+  Enable Multi Corner Analysis               :  Yes
+  Enable Pessimism Removal                   :  Yes
+  Pessimism Removal Resolution               :  Nearest Common Node
+  Enable Input Delay Default Clock           :  No
+  Enable Preset / Clear Arcs                 :  No
+  Disable Flight Delays                      :  No
+  Ignore I/O Paths                           :  No
+  Timing Early Launch at Borrowing Latches   :  No
+  Borrow Time for Max Delay Exceptions       :  Yes
+  Merge Timing Exceptions                    :  Yes
+
+  Corner  Analyze    Analyze    
+  Name    Max Paths  Min Paths  
+  ------  ---------  ---------  
+  Slow    Yes        Yes        
+  Fast    Yes        Yes        
+
+
+
+check_timing report
+
+Table of Contents
+-----------------
+1. checking no_clock (0)
+2. checking constant_clock (0)
+3. checking pulse_width_clock (0)
+4. checking unconstrained_internal_endpoints (0)
+5. checking no_input_delay (60)
+6. checking no_output_delay (143)
+7. checking multiple_clock (0)
+8. checking generated_clocks (0)
+9. checking loops (0)
+10. checking partial_input_delay (0)
+11. checking partial_output_delay (0)
+12. checking latch_loops (0)
+
+1. checking no_clock (0)
+------------------------
+ There are 0 register/latch pins with no clock.
+
+
+2. checking constant_clock (0)
+------------------------------
+ There are 0 register/latch pins with constant_clock.
+
+
+3. checking pulse_width_clock (0)
+---------------------------------
+ There are 0 register/latch pins which need pulse_width check
+
+
+4. checking unconstrained_internal_endpoints (0)
+------------------------------------------------
+ There are 0 pins that are not constrained for maximum delay.
+
+ There are 0 pins that are not constrained for maximum delay due to constant clock.
+
+
+5. checking no_input_delay (60)
+-------------------------------
+ There are 60 input ports with no input delay specified. (HIGH)
+
+ There are 0 input ports with no input delay but user has a false path constraint.
+
+
+6. checking no_output_delay (143)
+---------------------------------
+ There are 143 ports with no output delay specified. (HIGH)
+
+ There are 0 ports with no output delay but user has a false path constraint
+
+ There are 0 ports with no output delay but with a timing clock defined on it or propagating through it
+
+
+7. checking multiple_clock (0)
+------------------------------
+ There are 0 register/latch pins with multiple clocks.
+
+
+8. checking generated_clocks (0)
+--------------------------------
+ There are 0 generated clocks that are not connected to a clock source.
+
+
+9. checking loops (0)
+---------------------
+ There are 0 combinational loops in the design.
+
+
+10. checking partial_input_delay (0)
+------------------------------------
+ There are 0 input ports with partial input delay specified.
+
+
+11. checking partial_output_delay (0)
+-------------------------------------
+ There are 0 ports with partial output delay specified.
+
+
+12. checking latch_loops (0)
+----------------------------
+ There are 0 combinational latch loops in the design through latch input
+
+
+
+------------------------------------------------------------------------------------------------
+| Design Timing Summary
+| ---------------------
+------------------------------------------------------------------------------------------------
+
+    WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+    -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+      0.006        0.000                      0                33124        0.035        0.000                      0                33124        0.641        0.000                       0                 10561  
+
+
+All user specified timing constraints are met.
+
+
+------------------------------------------------------------------------------------------------
+| Clock Summary
+| -------------
+------------------------------------------------------------------------------------------------
+
+Clock  Waveform(ns)         Period(ns)      Frequency(MHz)
+-----  ------------         ----------      --------------
+clk    {0.000 1.667}        2.850           350.877         
+
+
+------------------------------------------------------------------------------------------------
+| Intra Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+Clock             WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
+-----             -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
+clk                 0.006        0.000                      0                33124        0.035        0.000                      0                33124        0.641        0.000                       0                 10561  
+
+
+------------------------------------------------------------------------------------------------
+| Inter Clock Table
+| -----------------
+------------------------------------------------------------------------------------------------
+
+From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Other Path Groups Table
+| -----------------------
+------------------------------------------------------------------------------------------------
+
+Path Group    From Clock    To Clock          WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints  
+----------    ----------    --------          -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------  
+
+
+------------------------------------------------------------------------------------------------
+| Timing Details
+| --------------
+------------------------------------------------------------------------------------------------
+
+
+---------------------------------------------------------------------------------------------------
+From Clock:  clk
+  To Clock:  clk
+
+Setup :            0  Failing Endpoints,  Worst Slack        0.006ns,  Total Violation        0.000ns
+Hold  :            0  Failing Endpoints,  Worst Slack        0.035ns,  Total Violation        0.000ns
+PW    :            0  Failing Endpoints,  Worst Slack        0.641ns,  Total Violation        0.000ns
+---------------------------------------------------------------------------------------------------
+
+
+Max Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.006ns  (required time - arrival time)
+  Source:                 current_fifo_arr_reg[2][3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.850ns  (clk rise@2.850ns - clk rise@0.000ns)
+  Data Path Delay:        2.825ns  (logic 1.052ns (37.239%)  route 1.773ns (62.761%))
+  Logic Levels:           12  (CARRY8=3 LUT5=3 LUT6=5 MUXF7=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.871 - 2.850 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.030     0.030    clk
+    SLICE_X61Y78         FDRE                                         r  current_fifo_arr_reg[2][3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y78         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.078     0.108 f  current_fifo_arr_reg[2][3]/Q
+                         net (fo=100, routed)         0.143     0.251    g_GENERATE_LEVELS_A[2].i_gb_level_a/current_fifo_byte_cnt_reg[7]_0[3]
+    SLICE_X61Y78         LUT5 (Prop_F6LUT_SLICEM_I1_O)
+                                                      0.148     0.399 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2/O
+                         net (fo=4, routed)           0.123     0.522    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2_n_0
+    SLICE_X61Y78         LUT6 (Prop_A6LUT_SLICEM_I4_O)
+                                                      0.150     0.672 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3/O
+                         net (fo=6, routed)           0.108     0.780    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3_n_0
+    SLICE_X61Y77         LUT6 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.037     0.817 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4/O
+                         net (fo=3, routed)           0.201     1.018    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4_n_0
+    SLICE_X60Y78         LUT5 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.051     1.069 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3/O
+                         net (fo=1, routed)           0.311     1.380    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.035     1.415 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3/O
+                         net (fo=1, routed)           0.092     1.507    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_E6LUT_SLICEL_I1_O)
+                                                      0.099     1.606 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_2__3/O
+                         net (fo=162, routed)         0.383     1.989    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_1__3_n_0
+    SLICE_X56Y81         LUT6 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.037     2.026 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3/O
+                         net (fo=1, routed)           0.025     2.051    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3_n_0
+    SLICE_X56Y81         MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.069     2.120 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3/O
+                         net (fo=1, routed)           0.284     2.404    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3_n_0
+    SLICE_X57Y81         LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.088     2.492 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3/O
+                         net (fo=1, routed)           0.025     2.517    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3_n_0
+    SLICE_X57Y81         CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     2.680 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.706    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3_n_0
+    SLICE_X57Y82         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     2.721 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.747    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3_n_0
+    SLICE_X57Y83         CARRY8 (Prop_CARRY8_SLICEM_CI_O[3])
+                                                      0.082     2.829 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]_i_1__4/O[3]
+                         net (fo=1, routed)           0.026     2.855    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt04_out[19]
+    SLICE_X57Y83         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        2.850     2.850 r  
+                                                      0.000     2.850 r  clk (IN)
+                         net (fo=10560, unset)        0.021     2.871    g_GENERATE_LEVELS_A[2].i_gb_level_a/clk
+    SLICE_X57Y83         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]/C
+                         clock pessimism              0.000     2.871    
+                         clock uncertainty           -0.035     2.836    
+    SLICE_X57Y83         FDRE (Setup_DFF_SLICEM_C_D)
+                                                      0.025     2.861    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]
+  -------------------------------------------------------------------
+                         required time                          2.861    
+                         arrival time                          -2.855    
+  -------------------------------------------------------------------
+                         slack                                  0.006    
+
+Slack (MET) :             0.013ns  (required time - arrival time)
+  Source:                 current_fifo_arr_reg[2][3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.850ns  (clk rise@2.850ns - clk rise@0.000ns)
+  Data Path Delay:        2.818ns  (logic 1.071ns (38.006%)  route 1.747ns (61.994%))
+  Logic Levels:           11  (CARRY8=2 LUT5=3 LUT6=5 MUXF7=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.871 - 2.850 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.030     0.030    clk
+    SLICE_X61Y78         FDRE                                         r  current_fifo_arr_reg[2][3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y78         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.078     0.108 f  current_fifo_arr_reg[2][3]/Q
+                         net (fo=100, routed)         0.143     0.251    g_GENERATE_LEVELS_A[2].i_gb_level_a/current_fifo_byte_cnt_reg[7]_0[3]
+    SLICE_X61Y78         LUT5 (Prop_F6LUT_SLICEM_I1_O)
+                                                      0.148     0.399 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2/O
+                         net (fo=4, routed)           0.123     0.522    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2_n_0
+    SLICE_X61Y78         LUT6 (Prop_A6LUT_SLICEM_I4_O)
+                                                      0.150     0.672 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3/O
+                         net (fo=6, routed)           0.108     0.780    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3_n_0
+    SLICE_X61Y77         LUT6 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.037     0.817 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4/O
+                         net (fo=3, routed)           0.201     1.018    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4_n_0
+    SLICE_X60Y78         LUT5 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.051     1.069 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3/O
+                         net (fo=1, routed)           0.311     1.380    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.035     1.415 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3/O
+                         net (fo=1, routed)           0.092     1.507    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_E6LUT_SLICEL_I1_O)
+                                                      0.099     1.606 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_2__3/O
+                         net (fo=162, routed)         0.383     1.989    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_1__3_n_0
+    SLICE_X56Y81         LUT6 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.037     2.026 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3/O
+                         net (fo=1, routed)           0.025     2.051    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3_n_0
+    SLICE_X56Y81         MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.069     2.120 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3/O
+                         net (fo=1, routed)           0.284     2.404    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3_n_0
+    SLICE_X57Y81         LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.088     2.492 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3/O
+                         net (fo=1, routed)           0.025     2.517    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3_n_0
+    SLICE_X57Y81         CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     2.680 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.706    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3_n_0
+    SLICE_X57Y82         CARRY8 (Prop_CARRY8_SLICEM_CI_O[7])
+                                                      0.116     2.822 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3/O[7]
+                         net (fo=1, routed)           0.026     2.848    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt04_out[15]
+    SLICE_X57Y82         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        2.850     2.850 r  
+                                                      0.000     2.850 r  clk (IN)
+                         net (fo=10560, unset)        0.021     2.871    g_GENERATE_LEVELS_A[2].i_gb_level_a/clk
+    SLICE_X57Y82         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]/C
+                         clock pessimism              0.000     2.871    
+                         clock uncertainty           -0.035     2.836    
+    SLICE_X57Y82         FDRE (Setup_HFF_SLICEM_C_D)
+                                                      0.025     2.861    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]
+  -------------------------------------------------------------------
+                         required time                          2.861    
+                         arrival time                          -2.848    
+  -------------------------------------------------------------------
+                         slack                                  0.013    
+
+Slack (MET) :             0.013ns  (required time - arrival time)
+  Source:                 current_fifo_arr_reg[2][3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[17]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.850ns  (clk rise@2.850ns - clk rise@0.000ns)
+  Data Path Delay:        2.818ns  (logic 1.046ns (37.119%)  route 1.772ns (62.881%))
+  Logic Levels:           12  (CARRY8=3 LUT5=3 LUT6=5 MUXF7=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.871 - 2.850 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.030     0.030    clk
+    SLICE_X61Y78         FDRE                                         r  current_fifo_arr_reg[2][3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y78         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.078     0.108 f  current_fifo_arr_reg[2][3]/Q
+                         net (fo=100, routed)         0.143     0.251    g_GENERATE_LEVELS_A[2].i_gb_level_a/current_fifo_byte_cnt_reg[7]_0[3]
+    SLICE_X61Y78         LUT5 (Prop_F6LUT_SLICEM_I1_O)
+                                                      0.148     0.399 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2/O
+                         net (fo=4, routed)           0.123     0.522    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2_n_0
+    SLICE_X61Y78         LUT6 (Prop_A6LUT_SLICEM_I4_O)
+                                                      0.150     0.672 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3/O
+                         net (fo=6, routed)           0.108     0.780    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3_n_0
+    SLICE_X61Y77         LUT6 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.037     0.817 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4/O
+                         net (fo=3, routed)           0.201     1.018    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4_n_0
+    SLICE_X60Y78         LUT5 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.051     1.069 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3/O
+                         net (fo=1, routed)           0.311     1.380    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.035     1.415 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3/O
+                         net (fo=1, routed)           0.092     1.507    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_E6LUT_SLICEL_I1_O)
+                                                      0.099     1.606 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_2__3/O
+                         net (fo=162, routed)         0.383     1.989    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_1__3_n_0
+    SLICE_X56Y81         LUT6 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.037     2.026 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3/O
+                         net (fo=1, routed)           0.025     2.051    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3_n_0
+    SLICE_X56Y81         MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.069     2.120 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3/O
+                         net (fo=1, routed)           0.284     2.404    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3_n_0
+    SLICE_X57Y81         LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.088     2.492 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3/O
+                         net (fo=1, routed)           0.025     2.517    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3_n_0
+    SLICE_X57Y81         CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     2.680 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.706    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3_n_0
+    SLICE_X57Y82         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     2.721 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.747    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3_n_0
+    SLICE_X57Y83         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.076     2.823 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]_i_1__4/O[1]
+                         net (fo=1, routed)           0.025     2.848    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt04_out[17]
+    SLICE_X57Y83         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        2.850     2.850 r  
+                                                      0.000     2.850 r  clk (IN)
+                         net (fo=10560, unset)        0.021     2.871    g_GENERATE_LEVELS_A[2].i_gb_level_a/clk
+    SLICE_X57Y83         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[17]/C
+                         clock pessimism              0.000     2.871    
+                         clock uncertainty           -0.035     2.836    
+    SLICE_X57Y83         FDRE (Setup_BFF_SLICEM_C_D)
+                                                      0.025     2.861    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[17]
+  -------------------------------------------------------------------
+                         required time                          2.861    
+                         arrival time                          -2.848    
+  -------------------------------------------------------------------
+                         slack                                  0.013    
+
+Slack (MET) :             0.014ns  (required time - arrival time)
+  Source:                 current_fifo_arr_reg[2][3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[13]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.850ns  (clk rise@2.850ns - clk rise@0.000ns)
+  Data Path Delay:        2.817ns  (logic 1.071ns (38.019%)  route 1.746ns (61.981%))
+  Logic Levels:           11  (CARRY8=2 LUT5=3 LUT6=5 MUXF7=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.871 - 2.850 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.030     0.030    clk
+    SLICE_X61Y78         FDRE                                         r  current_fifo_arr_reg[2][3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y78         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.078     0.108 f  current_fifo_arr_reg[2][3]/Q
+                         net (fo=100, routed)         0.143     0.251    g_GENERATE_LEVELS_A[2].i_gb_level_a/current_fifo_byte_cnt_reg[7]_0[3]
+    SLICE_X61Y78         LUT5 (Prop_F6LUT_SLICEM_I1_O)
+                                                      0.148     0.399 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2/O
+                         net (fo=4, routed)           0.123     0.522    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2_n_0
+    SLICE_X61Y78         LUT6 (Prop_A6LUT_SLICEM_I4_O)
+                                                      0.150     0.672 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3/O
+                         net (fo=6, routed)           0.108     0.780    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3_n_0
+    SLICE_X61Y77         LUT6 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.037     0.817 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4/O
+                         net (fo=3, routed)           0.201     1.018    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4_n_0
+    SLICE_X60Y78         LUT5 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.051     1.069 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3/O
+                         net (fo=1, routed)           0.311     1.380    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.035     1.415 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3/O
+                         net (fo=1, routed)           0.092     1.507    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_E6LUT_SLICEL_I1_O)
+                                                      0.099     1.606 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_2__3/O
+                         net (fo=162, routed)         0.383     1.989    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_1__3_n_0
+    SLICE_X56Y81         LUT6 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.037     2.026 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3/O
+                         net (fo=1, routed)           0.025     2.051    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3_n_0
+    SLICE_X56Y81         MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.069     2.120 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3/O
+                         net (fo=1, routed)           0.284     2.404    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3_n_0
+    SLICE_X57Y81         LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.088     2.492 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3/O
+                         net (fo=1, routed)           0.025     2.517    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3_n_0
+    SLICE_X57Y81         CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     2.680 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.706    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3_n_0
+    SLICE_X57Y82         CARRY8 (Prop_CARRY8_SLICEM_CI_O[5])
+                                                      0.116     2.822 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3/O[5]
+                         net (fo=1, routed)           0.025     2.847    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt04_out[13]
+    SLICE_X57Y82         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        2.850     2.850 r  
+                                                      0.000     2.850 r  clk (IN)
+                         net (fo=10560, unset)        0.021     2.871    g_GENERATE_LEVELS_A[2].i_gb_level_a/clk
+    SLICE_X57Y82         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[13]/C
+                         clock pessimism              0.000     2.871    
+                         clock uncertainty           -0.035     2.836    
+    SLICE_X57Y82         FDRE (Setup_FFF_SLICEM_C_D)
+                                                      0.025     2.861    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[13]
+  -------------------------------------------------------------------
+                         required time                          2.861    
+                         arrival time                          -2.847    
+  -------------------------------------------------------------------
+                         slack                                  0.014    
+
+Slack (MET) :             0.021ns  (required time - arrival time)
+  Source:                 current_fifo_arr_reg[2][3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[18]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.850ns  (clk rise@2.850ns - clk rise@0.000ns)
+  Data Path Delay:        2.810ns  (logic 1.037ns (36.904%)  route 1.773ns (63.096%))
+  Logic Levels:           12  (CARRY8=3 LUT5=3 LUT6=5 MUXF7=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.871 - 2.850 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.030     0.030    clk
+    SLICE_X61Y78         FDRE                                         r  current_fifo_arr_reg[2][3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y78         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.078     0.108 f  current_fifo_arr_reg[2][3]/Q
+                         net (fo=100, routed)         0.143     0.251    g_GENERATE_LEVELS_A[2].i_gb_level_a/current_fifo_byte_cnt_reg[7]_0[3]
+    SLICE_X61Y78         LUT5 (Prop_F6LUT_SLICEM_I1_O)
+                                                      0.148     0.399 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2/O
+                         net (fo=4, routed)           0.123     0.522    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2_n_0
+    SLICE_X61Y78         LUT6 (Prop_A6LUT_SLICEM_I4_O)
+                                                      0.150     0.672 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3/O
+                         net (fo=6, routed)           0.108     0.780    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3_n_0
+    SLICE_X61Y77         LUT6 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.037     0.817 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4/O
+                         net (fo=3, routed)           0.201     1.018    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4_n_0
+    SLICE_X60Y78         LUT5 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.051     1.069 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3/O
+                         net (fo=1, routed)           0.311     1.380    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.035     1.415 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3/O
+                         net (fo=1, routed)           0.092     1.507    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_E6LUT_SLICEL_I1_O)
+                                                      0.099     1.606 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_2__3/O
+                         net (fo=162, routed)         0.383     1.989    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_1__3_n_0
+    SLICE_X56Y81         LUT6 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.037     2.026 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3/O
+                         net (fo=1, routed)           0.025     2.051    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3_n_0
+    SLICE_X56Y81         MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.069     2.120 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3/O
+                         net (fo=1, routed)           0.284     2.404    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3_n_0
+    SLICE_X57Y81         LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.088     2.492 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3/O
+                         net (fo=1, routed)           0.025     2.517    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3_n_0
+    SLICE_X57Y81         CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     2.680 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.706    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3_n_0
+    SLICE_X57Y82         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     2.721 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.747    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3_n_0
+    SLICE_X57Y83         CARRY8 (Prop_CARRY8_SLICEM_CI_O[2])
+                                                      0.067     2.814 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]_i_1__4/O[2]
+                         net (fo=1, routed)           0.026     2.840    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt04_out[18]
+    SLICE_X57Y83         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        2.850     2.850 r  
+                                                      0.000     2.850 r  clk (IN)
+                         net (fo=10560, unset)        0.021     2.871    g_GENERATE_LEVELS_A[2].i_gb_level_a/clk
+    SLICE_X57Y83         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[18]/C
+                         clock pessimism              0.000     2.871    
+                         clock uncertainty           -0.035     2.836    
+    SLICE_X57Y83         FDRE (Setup_CFF_SLICEM_C_D)
+                                                      0.025     2.861    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[18]
+  -------------------------------------------------------------------
+                         required time                          2.861    
+                         arrival time                          -2.840    
+  -------------------------------------------------------------------
+                         slack                                  0.021    
+
+Slack (MET) :             0.026ns  (required time - arrival time)
+  Source:                 current_fifo_arr_reg[2][3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[14]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.850ns  (clk rise@2.850ns - clk rise@0.000ns)
+  Data Path Delay:        2.805ns  (logic 1.058ns (37.718%)  route 1.747ns (62.282%))
+  Logic Levels:           11  (CARRY8=2 LUT5=3 LUT6=5 MUXF7=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.871 - 2.850 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.030     0.030    clk
+    SLICE_X61Y78         FDRE                                         r  current_fifo_arr_reg[2][3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y78         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.078     0.108 f  current_fifo_arr_reg[2][3]/Q
+                         net (fo=100, routed)         0.143     0.251    g_GENERATE_LEVELS_A[2].i_gb_level_a/current_fifo_byte_cnt_reg[7]_0[3]
+    SLICE_X61Y78         LUT5 (Prop_F6LUT_SLICEM_I1_O)
+                                                      0.148     0.399 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2/O
+                         net (fo=4, routed)           0.123     0.522    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2_n_0
+    SLICE_X61Y78         LUT6 (Prop_A6LUT_SLICEM_I4_O)
+                                                      0.150     0.672 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3/O
+                         net (fo=6, routed)           0.108     0.780    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3_n_0
+    SLICE_X61Y77         LUT6 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.037     0.817 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4/O
+                         net (fo=3, routed)           0.201     1.018    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4_n_0
+    SLICE_X60Y78         LUT5 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.051     1.069 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3/O
+                         net (fo=1, routed)           0.311     1.380    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.035     1.415 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3/O
+                         net (fo=1, routed)           0.092     1.507    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_E6LUT_SLICEL_I1_O)
+                                                      0.099     1.606 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_2__3/O
+                         net (fo=162, routed)         0.383     1.989    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_1__3_n_0
+    SLICE_X56Y81         LUT6 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.037     2.026 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3/O
+                         net (fo=1, routed)           0.025     2.051    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3_n_0
+    SLICE_X56Y81         MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.069     2.120 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3/O
+                         net (fo=1, routed)           0.284     2.404    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3_n_0
+    SLICE_X57Y81         LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.088     2.492 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3/O
+                         net (fo=1, routed)           0.025     2.517    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3_n_0
+    SLICE_X57Y81         CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     2.680 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.706    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3_n_0
+    SLICE_X57Y82         CARRY8 (Prop_CARRY8_SLICEM_CI_O[6])
+                                                      0.103     2.809 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3/O[6]
+                         net (fo=1, routed)           0.026     2.835    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt04_out[14]
+    SLICE_X57Y82         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        2.850     2.850 r  
+                                                      0.000     2.850 r  clk (IN)
+                         net (fo=10560, unset)        0.021     2.871    g_GENERATE_LEVELS_A[2].i_gb_level_a/clk
+    SLICE_X57Y82         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[14]/C
+                         clock pessimism              0.000     2.871    
+                         clock uncertainty           -0.035     2.836    
+    SLICE_X57Y82         FDRE (Setup_GFF_SLICEM_C_D)
+                                                      0.025     2.861    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[14]
+  -------------------------------------------------------------------
+                         required time                          2.861    
+                         arrival time                          -2.835    
+  -------------------------------------------------------------------
+                         slack                                  0.026    
+
+Slack (MET) :             0.027ns  (required time - arrival time)
+  Source:                 current_fifo_arr_reg[1][0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.850ns  (clk rise@2.850ns - clk rise@0.000ns)
+  Data Path Delay:        2.804ns  (logic 1.028ns (36.662%)  route 1.776ns (63.338%))
+  Logic Levels:           11  (CARRY8=2 LUT2=1 LUT5=2 LUT6=5 MUXF7=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.871 - 2.850 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.030     0.030    clk
+    SLICE_X52Y71         FDRE                                         r  current_fifo_arr_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y71         FDRE (Prop_BFF2_SLICEM_C_Q)
+                                                      0.080     0.110 f  current_fifo_arr_reg[1][0]/Q
+                         net (fo=92, routed)          0.158     0.268    g_GENERATE_LEVELS_A[1].i_gb_level_a/current_fifo_byte_cnt_reg[7]_1[0]
+    SLICE_X51Y71         LUT5 (Prop_B6LUT_SLICEL_I2_O)
+                                                      0.148     0.416 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_43__2/O
+                         net (fo=3, routed)           0.250     0.666    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_43__2_n_0
+    SLICE_X50Y70         LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.123     0.789 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_24__3/O
+                         net (fo=6, routed)           0.201     0.990    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_24__3_n_0
+    SLICE_X50Y69         LUT6 (Prop_F6LUT_SLICEM_I3_O)
+                                                      0.088     1.078 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_45__0/O
+                         net (fo=1, routed)           0.041     1.119    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_45__0_n_0
+    SLICE_X50Y69         LUT6 (Prop_G6LUT_SLICEM_I2_O)
+                                                      0.052     1.171 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_28__1/O
+                         net (fo=2, routed)           0.140     1.311    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_28__1_n_0
+    SLICE_X49Y70         LUT2 (Prop_A6LUT_SLICEL_I0_O)
+                                                      0.050     1.361 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_11__3/O
+                         net (fo=2, routed)           0.048     1.409    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_11__3_n_0
+    SLICE_X49Y69         LUT6 (Prop_G6LUT_SLICEL_I5_O)
+                                                      0.035     1.444 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_2__4/O
+                         net (fo=1, routed)           0.086     1.530    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_2__4_n_0
+    SLICE_X48Y69         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.090     1.620 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_1__4/O
+                         net (fo=101, routed)         0.477     2.097    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_1__4_n_0
+    SLICE_X43Y68         MUXF7 (Prop_F7MUX_AB_SLICEL_S_O)
+                                                      0.072     2.169 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_65__4/O
+                         net (fo=1, routed)           0.309     2.478    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_65__4_n_0
+    SLICE_X44Y68         LUT5 (Prop_E6LUT_SLICEM_I4_O)
+                                                      0.052     2.530 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt[15]_i_13__4/O
+                         net (fo=1, routed)           0.014     2.544    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt[15]_i_13__4_n_0
+    SLICE_X44Y68         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.156     2.700 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__4/CO[7]
+                         net (fo=1, routed)           0.026     2.726    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__4_n_0
+    SLICE_X44Y69         CARRY8 (Prop_CARRY8_SLICEM_CI_O[3])
+                                                      0.082     2.808 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]_i_1__5/O[3]
+                         net (fo=1, routed)           0.026     2.834    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt04_out[19]
+    SLICE_X44Y69         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        2.850     2.850 r  
+                                                      0.000     2.850 r  clk (IN)
+                         net (fo=10560, unset)        0.021     2.871    g_GENERATE_LEVELS_A[1].i_gb_level_a/clk
+    SLICE_X44Y69         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]/C
+                         clock pessimism              0.000     2.871    
+                         clock uncertainty           -0.035     2.836    
+    SLICE_X44Y69         FDRE (Setup_DFF_SLICEM_C_D)
+                                                      0.025     2.861    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]
+  -------------------------------------------------------------------
+                         required time                          2.861    
+                         arrival time                          -2.834    
+  -------------------------------------------------------------------
+                         slack                                  0.027    
+
+Slack (MET) :             0.033ns  (required time - arrival time)
+  Source:                 current_fifo_arr_reg[2][3]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[16]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.850ns  (clk rise@2.850ns - clk rise@0.000ns)
+  Data Path Delay:        2.798ns  (logic 1.026ns (36.669%)  route 1.772ns (63.331%))
+  Logic Levels:           12  (CARRY8=3 LUT5=3 LUT6=5 MUXF7=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.871 - 2.850 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.030     0.030    clk
+    SLICE_X61Y78         FDRE                                         r  current_fifo_arr_reg[2][3]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X61Y78         FDRE (Prop_BFF_SLICEM_C_Q)
+                                                      0.078     0.108 f  current_fifo_arr_reg[2][3]/Q
+                         net (fo=100, routed)         0.143     0.251    g_GENERATE_LEVELS_A[2].i_gb_level_a/current_fifo_byte_cnt_reg[7]_0[3]
+    SLICE_X61Y78         LUT5 (Prop_F6LUT_SLICEM_I1_O)
+                                                      0.148     0.399 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2/O
+                         net (fo=4, routed)           0.123     0.522    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_38__2_n_0
+    SLICE_X61Y78         LUT6 (Prop_A6LUT_SLICEM_I4_O)
+                                                      0.150     0.672 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3/O
+                         net (fo=6, routed)           0.108     0.780    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_19__3_n_0
+    SLICE_X61Y77         LUT6 (Prop_D6LUT_SLICEM_I2_O)
+                                                      0.037     0.817 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4/O
+                         net (fo=3, routed)           0.201     1.018    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_16__4_n_0
+    SLICE_X60Y78         LUT5 (Prop_C6LUT_SLICEM_I0_O)
+                                                      0.051     1.069 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3/O
+                         net (fo=1, routed)           0.311     1.380    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_6__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_F6LUT_SLICEL_I1_O)
+                                                      0.035     1.415 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3/O
+                         net (fo=1, routed)           0.092     1.507    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_4__3_n_0
+    SLICE_X58Y78         LUT6 (Prop_E6LUT_SLICEL_I1_O)
+                                                      0.099     1.606 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_2__3/O
+                         net (fo=162, routed)         0.383     1.989    g_GENERATE_LEVELS_A[2].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[0]_i_1__3_n_0
+    SLICE_X56Y81         LUT6 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.037     2.026 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3/O
+                         net (fo=1, routed)           0.025     2.051    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_100__3_n_0
+    SLICE_X56Y81         MUXF7 (Prop_F7MUX_CD_SLICEM_I0_O)
+                                                      0.069     2.120 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3/O
+                         net (fo=1, routed)           0.284     2.404    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_69__3_n_0
+    SLICE_X57Y81         LUT5 (Prop_D6LUT_SLICEM_I4_O)
+                                                      0.088     2.492 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3/O
+                         net (fo=1, routed)           0.025     2.517    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt[7]_i_14__3_n_0
+    SLICE_X57Y81         CARRY8 (Prop_CARRY8_SLICEM_S[3]_CO[7])
+                                                      0.163     2.680 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.706    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[7]_i_1__3_n_0
+    SLICE_X57Y82         CARRY8 (Prop_CARRY8_SLICEM_CI_CO[7])
+                                                      0.015     2.721 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3/CO[7]
+                         net (fo=1, routed)           0.026     2.747    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__3_n_0
+    SLICE_X57Y83         CARRY8 (Prop_CARRY8_SLICEM_CI_O[0])
+                                                      0.056     2.803 r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]_i_1__4/O[0]
+                         net (fo=1, routed)           0.025     2.828    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt04_out[16]
+    SLICE_X57Y83         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        2.850     2.850 r  
+                                                      0.000     2.850 r  clk (IN)
+                         net (fo=10560, unset)        0.021     2.871    g_GENERATE_LEVELS_A[2].i_gb_level_a/clk
+    SLICE_X57Y83         FDRE                                         r  g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[16]/C
+                         clock pessimism              0.000     2.871    
+                         clock uncertainty           -0.035     2.836    
+    SLICE_X57Y83         FDRE (Setup_AFF_SLICEM_C_D)
+                                                      0.025     2.861    g_GENERATE_LEVELS_A[2].i_gb_level_a/earliest_fifo_byte_cnt_reg[16]
+  -------------------------------------------------------------------
+                         required time                          2.861    
+                         arrival time                          -2.828    
+  -------------------------------------------------------------------
+                         slack                                  0.033    
+
+Slack (MET) :             0.034ns  (required time - arrival time)
+  Source:                 current_fifo_arr_reg[1][0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[17]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.850ns  (clk rise@2.850ns - clk rise@0.000ns)
+  Data Path Delay:        2.797ns  (logic 1.022ns (36.539%)  route 1.775ns (63.461%))
+  Logic Levels:           11  (CARRY8=2 LUT2=1 LUT5=2 LUT6=5 MUXF7=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.871 - 2.850 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.030     0.030    clk
+    SLICE_X52Y71         FDRE                                         r  current_fifo_arr_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y71         FDRE (Prop_BFF2_SLICEM_C_Q)
+                                                      0.080     0.110 f  current_fifo_arr_reg[1][0]/Q
+                         net (fo=92, routed)          0.158     0.268    g_GENERATE_LEVELS_A[1].i_gb_level_a/current_fifo_byte_cnt_reg[7]_1[0]
+    SLICE_X51Y71         LUT5 (Prop_B6LUT_SLICEL_I2_O)
+                                                      0.148     0.416 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_43__2/O
+                         net (fo=3, routed)           0.250     0.666    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_43__2_n_0
+    SLICE_X50Y70         LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.123     0.789 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_24__3/O
+                         net (fo=6, routed)           0.201     0.990    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_24__3_n_0
+    SLICE_X50Y69         LUT6 (Prop_F6LUT_SLICEM_I3_O)
+                                                      0.088     1.078 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_45__0/O
+                         net (fo=1, routed)           0.041     1.119    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_45__0_n_0
+    SLICE_X50Y69         LUT6 (Prop_G6LUT_SLICEM_I2_O)
+                                                      0.052     1.171 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_28__1/O
+                         net (fo=2, routed)           0.140     1.311    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_28__1_n_0
+    SLICE_X49Y70         LUT2 (Prop_A6LUT_SLICEL_I0_O)
+                                                      0.050     1.361 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_11__3/O
+                         net (fo=2, routed)           0.048     1.409    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_11__3_n_0
+    SLICE_X49Y69         LUT6 (Prop_G6LUT_SLICEL_I5_O)
+                                                      0.035     1.444 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_2__4/O
+                         net (fo=1, routed)           0.086     1.530    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_2__4_n_0
+    SLICE_X48Y69         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.090     1.620 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_1__4/O
+                         net (fo=101, routed)         0.477     2.097    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_1__4_n_0
+    SLICE_X43Y68         MUXF7 (Prop_F7MUX_AB_SLICEL_S_O)
+                                                      0.072     2.169 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_65__4/O
+                         net (fo=1, routed)           0.309     2.478    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_65__4_n_0
+    SLICE_X44Y68         LUT5 (Prop_E6LUT_SLICEM_I4_O)
+                                                      0.052     2.530 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt[15]_i_13__4/O
+                         net (fo=1, routed)           0.014     2.544    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt[15]_i_13__4_n_0
+    SLICE_X44Y68         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.156     2.700 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__4/CO[7]
+                         net (fo=1, routed)           0.026     2.726    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__4_n_0
+    SLICE_X44Y69         CARRY8 (Prop_CARRY8_SLICEM_CI_O[1])
+                                                      0.076     2.802 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]_i_1__5/O[1]
+                         net (fo=1, routed)           0.025     2.827    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt04_out[17]
+    SLICE_X44Y69         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        2.850     2.850 r  
+                                                      0.000     2.850 r  clk (IN)
+                         net (fo=10560, unset)        0.021     2.871    g_GENERATE_LEVELS_A[1].i_gb_level_a/clk
+    SLICE_X44Y69         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[17]/C
+                         clock pessimism              0.000     2.871    
+                         clock uncertainty           -0.035     2.836    
+    SLICE_X44Y69         FDRE (Setup_BFF_SLICEM_C_D)
+                                                      0.025     2.861    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[17]
+  -------------------------------------------------------------------
+                         required time                          2.861    
+                         arrival time                          -2.827    
+  -------------------------------------------------------------------
+                         slack                                  0.034    
+
+Slack (MET) :             0.042ns  (required time - arrival time)
+  Source:                 current_fifo_arr_reg[1][0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[18]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            2.850ns  (clk rise@2.850ns - clk rise@0.000ns)
+  Data Path Delay:        2.789ns  (logic 1.013ns (36.321%)  route 1.776ns (63.679%))
+  Logic Levels:           11  (CARRY8=2 LUT2=1 LUT5=2 LUT6=5 MUXF7=1)
+  Clock Path Skew:        -0.009ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.021ns = ( 2.871 - 2.850 ) 
+    Source Clock Delay      (SCD):    0.030ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.030     0.030    clk
+    SLICE_X52Y71         FDRE                                         r  current_fifo_arr_reg[1][0]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y71         FDRE (Prop_BFF2_SLICEM_C_Q)
+                                                      0.080     0.110 f  current_fifo_arr_reg[1][0]/Q
+                         net (fo=92, routed)          0.158     0.268    g_GENERATE_LEVELS_A[1].i_gb_level_a/current_fifo_byte_cnt_reg[7]_1[0]
+    SLICE_X51Y71         LUT5 (Prop_B6LUT_SLICEL_I2_O)
+                                                      0.148     0.416 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_43__2/O
+                         net (fo=3, routed)           0.250     0.666    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_43__2_n_0
+    SLICE_X50Y70         LUT6 (Prop_C6LUT_SLICEM_I4_O)
+                                                      0.123     0.789 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_24__3/O
+                         net (fo=6, routed)           0.201     0.990    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_24__3_n_0
+    SLICE_X50Y69         LUT6 (Prop_F6LUT_SLICEM_I3_O)
+                                                      0.088     1.078 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_45__0/O
+                         net (fo=1, routed)           0.041     1.119    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_45__0_n_0
+    SLICE_X50Y69         LUT6 (Prop_G6LUT_SLICEM_I2_O)
+                                                      0.052     1.171 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_28__1/O
+                         net (fo=2, routed)           0.140     1.311    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_28__1_n_0
+    SLICE_X49Y70         LUT2 (Prop_A6LUT_SLICEL_I0_O)
+                                                      0.050     1.361 f  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_11__3/O
+                         net (fo=2, routed)           0.048     1.409    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[3]_i_11__3_n_0
+    SLICE_X49Y69         LUT6 (Prop_G6LUT_SLICEL_I5_O)
+                                                      0.035     1.444 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_2__4/O
+                         net (fo=1, routed)           0.086     1.530    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_2__4_n_0
+    SLICE_X48Y69         LUT6 (Prop_G6LUT_SLICEM_I5_O)
+                                                      0.090     1.620 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_1__4/O
+                         net (fo=101, routed)         0.477     2.097    g_GENERATE_LEVELS_A[1].i_gb_level_a/p_earliest_non_empty_fifo.v_earliest_fifo_index[2]_i_1__4_n_0
+    SLICE_X43Y68         MUXF7 (Prop_F7MUX_AB_SLICEL_S_O)
+                                                      0.072     2.169 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_65__4/O
+                         net (fo=1, routed)           0.309     2.478    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_65__4_n_0
+    SLICE_X44Y68         LUT5 (Prop_E6LUT_SLICEM_I4_O)
+                                                      0.052     2.530 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt[15]_i_13__4/O
+                         net (fo=1, routed)           0.014     2.544    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt[15]_i_13__4_n_0
+    SLICE_X44Y68         CARRY8 (Prop_CARRY8_SLICEM_S[4]_CO[7])
+                                                      0.156     2.700 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__4/CO[7]
+                         net (fo=1, routed)           0.026     2.726    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[15]_i_1__4_n_0
+    SLICE_X44Y69         CARRY8 (Prop_CARRY8_SLICEM_CI_O[2])
+                                                      0.067     2.793 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[19]_i_1__5/O[2]
+                         net (fo=1, routed)           0.026     2.819    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt04_out[18]
+    SLICE_X44Y69         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        2.850     2.850 r  
+                                                      0.000     2.850 r  clk (IN)
+                         net (fo=10560, unset)        0.021     2.871    g_GENERATE_LEVELS_A[1].i_gb_level_a/clk
+    SLICE_X44Y69         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[18]/C
+                         clock pessimism              0.000     2.871    
+                         clock uncertainty           -0.035     2.836    
+    SLICE_X44Y69         FDRE (Setup_CFF_SLICEM_C_D)
+                                                      0.025     2.861    g_GENERATE_LEVELS_A[1].i_gb_level_a/earliest_fifo_byte_cnt_reg[18]
+  -------------------------------------------------------------------
+                         required time                          2.861    
+                         arrival time                          -2.819    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+
+
+
+
+Min Delay Paths
+--------------------------------------------------------------------------------------
+Slack (MET) :             0.035ns  (arrival time - required time)
+  Source:                 flow_id_reg[5]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_1_1/RAMS64E1_B/ADR5
+                            (rising edge-triggered cell RAMS64E1 clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Slow Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.162ns  (logic 0.058ns (35.802%)  route 0.104ns (64.198%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.036ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.057ns
+    Source Clock Delay      (SCD):    0.021ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.021     0.021    clk
+    SLICE_X44Y41         FDRE                                         r  flow_id_reg[5]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y41         FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.058     0.079 r  flow_id_reg[5]/Q
+                         net (fo=464, routed)         0.104     0.183    i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_1_1/A5
+    SLICE_X44Y40         RAMS64E1                                     r  i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_1_1/RAMS64E1_B/ADR5
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.057     0.057    i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_1_1/WCLK
+    SLICE_X44Y40         RAMS64E1                                     r  i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_1_1/RAMS64E1_B/CLK
+                         clock pessimism              0.000     0.057    
+    SLICE_X44Y40         RAMS64E1 (Hold_B6LUT_SLICEM_CLK_ADR5)
+                                                      0.091     0.148    i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_1_1/RAMS64E1_B
+  -------------------------------------------------------------------
+                         required time                         -0.148    
+                         arrival time                           0.183    
+  -------------------------------------------------------------------
+                         slack                                  0.035    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 flow_id_reg[2]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_0_0/RAMS64E1_F/ADR2
+                            (rising edge-triggered cell RAMS64E1 clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.130ns  (logic 0.039ns (30.000%)  route 0.091ns (70.000%))
+  Logic Levels:           0  
+  Clock Path Skew:        0.026ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.039ns
+    Source Clock Delay      (SCD):    0.013ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.013     0.013    clk
+    SLICE_X44Y43         FDRE                                         r  flow_id_reg[2]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y43         FDRE (Prop_HFF_SLICEM_C_Q)
+                                                      0.039     0.052 r  flow_id_reg[2]/Q
+                         net (fo=464, routed)         0.091     0.143    i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_0_0/A2
+    SLICE_X44Y43         RAMS64E1                                     r  i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_0_0/RAMS64E1_F/ADR2
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.039     0.039    i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_0_0/WCLK
+    SLICE_X44Y43         RAMS64E1                                     r  i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_0_0/RAMS64E1_F/CLK
+                         clock pessimism              0.000     0.039    
+    SLICE_X44Y43         RAMS64E1 (Hold_F6LUT_SLICEM_CLK_ADR2)
+                                                      0.062     0.101    i_last_enq_level_arr/U0/synth_options.dist_mem_inst/gen_sp_ram.spram_inst/ram_reg_0_511_0_0/RAMS64E1_F
+  -------------------------------------------------------------------
+                         required time                         -0.101    
+                         arrival time                           0.143    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[4]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[4]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.094ns  (logic 0.053ns (56.383%)  route 0.041ns (43.617%))
+  Logic Levels:           1  (LUT5=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.012ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.012     0.012    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/rd_clk
+    SLICE_X32Y44         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[4]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y44         FDRE (Prop_DFF_SLICEL_C_Q)
+                                                      0.039     0.051 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[4]/Q
+                         net (fo=3, routed)           0.025     0.076    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/Q[4]
+    SLICE_X32Y44         LUT5 (Prop_D6LUT_SLICEL_I4_O)
+                                                      0.014     0.090 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i[4]_i_1__2/O
+                         net (fo=1, routed)           0.016     0.106    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i[4]_i_1__2_n_0
+    SLICE_X32Y44         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[4]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.018     0.018    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/rd_clk
+    SLICE_X32Y44         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[4]/C
+                         clock pessimism              0.000     0.018    
+    SLICE_X32Y44         FDRE (Hold_DFF_SLICEL_C_D)
+                                                      0.046     0.064    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[4]
+  -------------------------------------------------------------------
+                         required time                         -0.064    
+                         arrival time                           0.106    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.094ns  (logic 0.054ns (57.447%)  route 0.040ns (42.553%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.012ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.012     0.012    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/rd_clk
+    SLICE_X32Y44         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X32Y44         FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.039     0.051 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/Q
+                         net (fo=3, routed)           0.025     0.076    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/Q[6]
+    SLICE_X32Y44         LUT3 (Prop_B6LUT_SLICEL_I2_O)
+                                                      0.015     0.091 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i[6]_i_1__2/O
+                         net (fo=1, routed)           0.015     0.106    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i[6]_i_1__2_n_0
+    SLICE_X32Y44         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.018     0.018    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/rd_clk
+    SLICE_X32Y44         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+                         clock pessimism              0.000     0.018    
+    SLICE_X32Y44         FDRE (Hold_BFF_SLICEL_C_D)
+                                                      0.046     0.064    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -0.064    
+                         arrival time                           0.106    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.094ns  (logic 0.054ns (57.447%)  route 0.040ns (42.553%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.012ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.012     0.012    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/rd_clk
+    SLICE_X33Y44         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y44         FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.039     0.051 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/Q
+                         net (fo=3, routed)           0.025     0.076    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/Q[6]
+    SLICE_X33Y44         LUT3 (Prop_B6LUT_SLICEL_I2_O)
+                                                      0.015     0.091 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i[6]_i_1__2/O
+                         net (fo=1, routed)           0.015     0.106    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i[6]_i_1__2_n_0
+    SLICE_X33Y44         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.018     0.018    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/rd_clk
+    SLICE_X33Y44         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+                         clock pessimism              0.000     0.018    
+    SLICE_X33Y44         FDRE (Hold_BFF_SLICEL_C_D)
+                                                      0.046     0.064    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -0.064    
+                         arrival time                           0.106    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.094ns  (logic 0.054ns (57.447%)  route 0.040ns (42.553%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.012ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.012     0.012    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/rd_clk
+    SLICE_X33Y46         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y46         FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.039     0.051 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/Q
+                         net (fo=2, routed)           0.025     0.076    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/Q[7]
+    SLICE_X33Y46         LUT4 (Prop_B6LUT_SLICEL_I3_O)
+                                                      0.015     0.091 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i[7]_i_1/O
+                         net (fo=1, routed)           0.015     0.106    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i[7]_i_1_n_0
+    SLICE_X33Y46         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.018     0.018    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/rd_clk
+    SLICE_X33Y46         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/C
+                         clock pessimism              0.000     0.018    
+    SLICE_X33Y46         FDRE (Hold_BFF_SLICEL_C_D)
+                                                      0.046     0.064    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -0.064    
+                         arrival time                           0.106    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.094ns  (logic 0.054ns (57.447%)  route 0.040ns (42.553%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.012ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.012     0.012    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/rd_clk
+    SLICE_X33Y27         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X33Y27         FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.039     0.051 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/Q
+                         net (fo=3, routed)           0.025     0.076    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/Q[6]
+    SLICE_X33Y27         LUT3 (Prop_B6LUT_SLICEL_I2_O)
+                                                      0.015     0.091 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i[6]_i_1__2/O
+                         net (fo=1, routed)           0.015     0.106    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i[6]_i_1__2_n_0
+    SLICE_X33Y27         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.018     0.018    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/rd_clk
+    SLICE_X33Y27         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+                         clock pessimism              0.000     0.018    
+    SLICE_X33Y27         FDRE (Hold_BFF_SLICEL_C_D)
+                                                      0.046     0.064    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -0.064    
+                         arrival time                           0.106    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.094ns  (logic 0.054ns (57.447%)  route 0.040ns (42.553%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.012ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.012     0.012    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/rd_clk
+    SLICE_X64Y38         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X64Y38         FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.039     0.051 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/Q
+                         net (fo=2, routed)           0.025     0.076    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/Q[7]
+    SLICE_X64Y38         LUT4 (Prop_B6LUT_SLICEL_I3_O)
+                                                      0.015     0.091 r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i[7]_i_1/O
+                         net (fo=1, routed)           0.015     0.106    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i[7]_i_1_n_0
+    SLICE_X64Y38         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.018     0.018    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/rd_clk
+    SLICE_X64Y38         FDRE                                         r  g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/C
+                         clock pessimism              0.000     0.018    
+    SLICE_X64Y38         FDRE (Hold_BFF_SLICEL_C_D)
+                                                      0.046     0.064    g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[5].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -0.064    
+                         arrival time                           0.106    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.094ns  (logic 0.054ns (57.447%)  route 0.040ns (42.553%))
+  Logic Levels:           1  (LUT3=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.012ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.012     0.012    g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/rd_clk
+    SLICE_X59Y47         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X59Y47         FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.039     0.051 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/Q
+                         net (fo=3, routed)           0.025     0.076    g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/Q[6]
+    SLICE_X59Y47         LUT3 (Prop_B6LUT_SLICEL_I2_O)
+                                                      0.015     0.091 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i[6]_i_1__2/O
+                         net (fo=1, routed)           0.015     0.106    g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i[6]_i_1__2_n_0
+    SLICE_X59Y47         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.018     0.018    g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/rd_clk
+    SLICE_X59Y47         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]/C
+                         clock pessimism              0.000     0.018    
+    SLICE_X59Y47         FDRE (Hold_BFF_SLICEL_C_D)
+                                                      0.046     0.064    g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[10].xpm_fifo_sync_inst/xpm_fifo_base_inst/rdpp1_inst/count_value_i_reg[6]
+  -------------------------------------------------------------------
+                         required time                         -0.064    
+                         arrival time                           0.106    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+Slack (MET) :             0.042ns  (arrival time - required time)
+  Source:                 g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Destination:            g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/D
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@1.667ns period=2.850ns})
+  Path Group:             clk
+  Path Type:              Hold (Min at Fast Process Corner)
+  Requirement:            0.000ns  (clk rise@0.000ns - clk rise@0.000ns)
+  Data Path Delay:        0.094ns  (logic 0.054ns (57.447%)  route 0.040ns (42.553%))
+  Logic Levels:           1  (LUT4=1)
+  Clock Path Skew:        0.006ns (DCD - SCD - CPR)
+    Destination Clock Delay (DCD):    0.018ns
+    Source Clock Delay      (SCD):    0.012ns
+    Clock Pessimism Removal (CPR):    -0.000ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.012     0.012    g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/rd_clk
+    SLICE_X15Y54         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/C
+  -------------------------------------------------------------------    -------------------
+    SLICE_X15Y54         FDRE (Prop_BFF_SLICEL_C_Q)
+                                                      0.039     0.051 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/Q
+                         net (fo=2, routed)           0.025     0.076    g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/Q[7]
+    SLICE_X15Y54         LUT4 (Prop_B6LUT_SLICEL_I3_O)
+                                                      0.015     0.091 r  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i[7]_i_1/O
+                         net (fo=1, routed)           0.015     0.106    g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i[7]_i_1_n_0
+    SLICE_X15Y54         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=10560, unset)        0.018     0.018    g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/rd_clk
+    SLICE_X15Y54         FDRE                                         r  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]/C
+                         clock pessimism              0.000     0.018    
+    SLICE_X15Y54         FDRE (Hold_BFF_SLICEL_C_D)
+                                                      0.046     0.064    g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[1].xpm_fifo_sync_inst/xpm_fifo_base_inst/wrpp1_inst/count_value_i_reg[7]
+  -------------------------------------------------------------------
+                         required time                         -0.064    
+                         arrival time                           0.106    
+  -------------------------------------------------------------------
+                         slack                                  0.042    
+
+
+
+
+
+Pulse Width Checks
+--------------------------------------------------------------------------------------
+Clock Name:         clk
+Waveform(ns):       { 0.000 1.667 }
+Period(ns):         2.850
+Sources:            { clk }
+
+Check Type        Corner  Lib Pin             Reference Pin  Required(ns)  Actual(ns)  Slack(ns)  Location      Pin
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.569         2.850       1.281      RAMB36_X2Y12  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[8].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Min Period        n/a     RAMB36E2/CLKBWRCLK  n/a            1.569         2.850       1.281      RAMB36_X2Y12  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[8].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.569         2.850       1.281      RAMB36_X6Y4   g_GENERATE_LEVELS_B[0].i_gb_level_b/g_GENERATE_FIFOS[11].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Min Period        n/a     RAMB36E2/CLKBWRCLK  n/a            1.569         2.850       1.281      RAMB36_X6Y4   g_GENERATE_LEVELS_B[0].i_gb_level_b/g_GENERATE_FIFOS[11].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.569         2.850       1.281      RAMB36_X2Y5   g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Min Period        n/a     RAMB36E2/CLKBWRCLK  n/a            1.569         2.850       1.281      RAMB36_X2Y5   g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.569         2.850       1.281      RAMB36_X3Y9   g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Min Period        n/a     RAMB36E2/CLKBWRCLK  n/a            1.569         2.850       1.281      RAMB36_X3Y9   g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+Min Period        n/a     RAMB36E2/CLKARDCLK  n/a            1.569         2.850       1.281      RAMB36_X2Y19  g_GENERATE_LEVELS_A[2].i_gb_level_a/g_GENERATE_FIFOS[4].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Min Period        n/a     RAMB36E2/CLKBWRCLK  n/a            1.569         2.850       1.281      RAMB36_X2Y19  g_GENERATE_LEVELS_A[2].i_gb_level_a/g_GENERATE_FIFOS[4].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+Low Pulse Width   Slow    RAMB36E2/CLKARDCLK  n/a            0.542         1.183       0.641      RAMB36_X2Y12  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[8].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Low Pulse Width   Fast    RAMB36E2/CLKARDCLK  n/a            0.542         1.183       0.641      RAMB36_X2Y12  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[8].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Low Pulse Width   Slow    RAMB36E2/CLKARDCLK  n/a            0.542         1.183       0.641      RAMB36_X6Y4   g_GENERATE_LEVELS_B[0].i_gb_level_b/g_GENERATE_FIFOS[11].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Low Pulse Width   Fast    RAMB36E2/CLKARDCLK  n/a            0.542         1.183       0.641      RAMB36_X6Y4   g_GENERATE_LEVELS_B[0].i_gb_level_b/g_GENERATE_FIFOS[11].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Low Pulse Width   Slow    RAMB36E2/CLKARDCLK  n/a            0.542         1.183       0.641      RAMB36_X2Y5   g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Low Pulse Width   Fast    RAMB36E2/CLKARDCLK  n/a            0.542         1.183       0.641      RAMB36_X2Y5   g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Low Pulse Width   Slow    RAMB36E2/CLKARDCLK  n/a            0.542         1.183       0.641      RAMB36_X3Y9   g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Low Pulse Width   Fast    RAMB36E2/CLKARDCLK  n/a            0.542         1.183       0.641      RAMB36_X3Y9   g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[13].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Low Pulse Width   Slow    RAMB36E2/CLKARDCLK  n/a            0.542         1.183       0.641      RAMB36_X2Y19  g_GENERATE_LEVELS_A[2].i_gb_level_a/g_GENERATE_FIFOS[4].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+Low Pulse Width   Fast    RAMB36E2/CLKARDCLK  n/a            0.542         1.183       0.641      RAMB36_X2Y19  g_GENERATE_LEVELS_A[2].i_gb_level_a/g_GENERATE_FIFOS[4].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+High Pulse Width  Slow    RAMB36E2/CLKARDCLK  n/a            0.542         1.667       1.125      RAMB36_X2Y12  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[8].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+High Pulse Width  Fast    RAMB36E2/CLKARDCLK  n/a            0.542         1.667       1.125      RAMB36_X2Y12  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[8].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+High Pulse Width  Slow    RAMB36E2/CLKBWRCLK  n/a            0.542         1.667       1.125      RAMB36_X2Y12  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[8].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+High Pulse Width  Fast    RAMB36E2/CLKBWRCLK  n/a            0.542         1.667       1.125      RAMB36_X2Y12  g_GENERATE_LEVELS_A[1].i_gb_level_a/g_GENERATE_FIFOS[8].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+High Pulse Width  Slow    RAMB36E2/CLKARDCLK  n/a            0.542         1.667       1.125      RAMB36_X6Y4   g_GENERATE_LEVELS_B[0].i_gb_level_b/g_GENERATE_FIFOS[11].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+High Pulse Width  Fast    RAMB36E2/CLKARDCLK  n/a            0.542         1.667       1.125      RAMB36_X6Y4   g_GENERATE_LEVELS_B[0].i_gb_level_b/g_GENERATE_FIFOS[11].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+High Pulse Width  Slow    RAMB36E2/CLKBWRCLK  n/a            0.542         1.667       1.125      RAMB36_X6Y4   g_GENERATE_LEVELS_B[0].i_gb_level_b/g_GENERATE_FIFOS[11].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+High Pulse Width  Fast    RAMB36E2/CLKBWRCLK  n/a            0.542         1.667       1.125      RAMB36_X6Y4   g_GENERATE_LEVELS_B[0].i_gb_level_b/g_GENERATE_FIFOS[11].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKBWRCLK
+High Pulse Width  Slow    RAMB36E2/CLKARDCLK  n/a            0.542         1.667       1.125      RAMB36_X2Y5   g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+High Pulse Width  Fast    RAMB36E2/CLKARDCLK  n/a            0.542         1.667       1.125      RAMB36_X2Y5   g_GENERATE_LEVELS_A[0].i_gb_level_a/g_GENERATE_FIFOS[3].xpm_fifo_sync_inst/xpm_fifo_base_inst/gen_sdpram.xpm_memory_base_inst/gen_wr_a.gen_word_narrow.mem_reg/CLKARDCLK
+
+
+
