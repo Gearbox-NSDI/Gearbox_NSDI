@@ -1,3 +1,20 @@
+## IEEE/ACM Transactions on Networking journal extension
+Release: Gearbox-ToN-2026
+This release provides the implementation artifact associated with:
+
+"Gearbox: A Hierarchical FIFO-Based Scheduler Approximating
+Weighted Fair Queuing"
+
+This repository originated with the NSDI 2022 Gearbox paper.
+The present release identifies the source and implementation
+materials associated with the IEEE/ACM Transactions on
+Networking journal extension.
+
+Contents include:
+- Gearbox VHDL source
+- VHDL testbench
+- FPGA implementation and utilization materials
+  
 # Gearbox_NSDI
 GitHub repository for NSDI paper: Gearbox: A Hierarchical Packet Scheduler for ApproximateWeighted Fair Queuing
 
